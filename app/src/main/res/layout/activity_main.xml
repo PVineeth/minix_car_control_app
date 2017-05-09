@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vineethp.minixcarcontrol.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/forwardBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="Go Forward"
+            android:onClick="goForward"/>
+
+        <Button
+            android:id="@+id/backwardBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Go Backward"
+            android:onClick="goBackward"
+            android:layout_above="@+id/textView"
+            android:layout_alignStart="@+id/accelerationseekbar" />
+
+        <Button
+            android:id="@+id/leftBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Go Left"
+            android:onClick="goLeft"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/forwardBtn"
+            android:layout_marginEnd="14dp" />
+
+        <Button
+            android:id="@+id/rightBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/leftBtn"
+            android:layout_alignBottom="@+id/leftBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:text="Go Right"
+            android:onClick="goRight"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="© MiniX" />
+
+        <TextView
+            android:id="@+id/statustext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forwardBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp"
+            android:text="Current Status" />
+
+        <SeekBar
+            android:id="@+id/accelerationseekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/rightBtn"
+            android:layout_alignStart="@+id/leftBtn"
+            android:layout_below="@+id/leftBtn"
+            android:layout_marginTop="65dp"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acceleration"
+            android:layout_marginBottom="24dp"
+            android:layout_alignBottom="@+id/accelerationseekbar"
+            android:layout_alignEnd="@+id/leftBtn"/>
+
+        <Button
+            android:id="@+id/brakeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brake"
+            android:onClick="applyBrake"
+            android:layout_alignBaseline="@+id/backwardBtn"
+            android:layout_alignBottom="@+id/backwardBtn"
+            android:layout_alignEnd="@+id/accelerationseekbar" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+
